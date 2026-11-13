@@ -218,3 +218,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Secrets and local config (never commit)
+api.txt
+*.key
+.env.*
+!.env.example
+**/api.txt
