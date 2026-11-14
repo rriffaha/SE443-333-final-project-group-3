@@ -1,0 +1,13 @@
+django__django-13513
+sphinx-doc__sphinx-8548
+django__django-13344
+django__django-15098
+django__django-12155
+sphinx-doc__sphinx-8638
+django__django-15252
+django__django-16631
+sphinx-doc__sphinx-8551
+django__django-13810
+sphinx-doc__sphinx-8721
+sphinx-doc__sphinx-8621
+matplotlib__matplotlib-25311

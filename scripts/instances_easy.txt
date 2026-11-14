@@ -1,0 +1,13 @@
+pydata__xarray-3677
+django__django-14089
+django__django-11163
+sympy__sympy-24539
+scikit-learn__scikit-learn-14894
+sphinx-doc__sphinx-9711
+astropy__astropy-14508
+pytest-dev__pytest-7432
+pallets__flask-5014
+matplotlib__matplotlib-13989
+psf__requests-2931
+pylint-dev__pylint-6903
+mwaskom__seaborn-3187
