@@ -1,0 +1,4 @@
+# Keep scripts and instance lists with Unix line endings (they run in WSL/Linux)
+scripts/* text eol=lf
+configs/* text eol=lf
+*.sh text eol=lf
