@@ -1,0 +1,20 @@
+{
+    "total_instances": 1,
+    "completed_instances": 0,
+    "resolved_instances": 1,
+    "unresolved_instances": 0,
+    "error_instances": 0,
+    "Mean coverage": 1.0,
+    "Mean coverage delta": 1.0,
+    "unstopped_instances": 0,
+    "completed_ids": [],
+    "resolved_ids": [
+        "pydata__xarray-3677"
+    ],
+    "unresolved_ids": [],
+    "error_ids": [],
+    "unstopped_containers": [],
+    "unremoved_images": [
+        "exec.eval.x86_64.bd0581d44706317407e86a.2d1c71ec16179861df8a9d:latest"
+    ]
+}
