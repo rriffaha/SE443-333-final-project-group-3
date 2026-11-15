@@ -1,0 +1,45 @@
+{
+    "total_instances": 13,
+    "completed_instances": 0,
+    "resolved_instances": 10,
+    "unresolved_instances": 3,
+    "error_instances": 0,
+    "Mean coverage": 0.944472315124489,
+    "Mean coverage delta": 0.6007660294311561,
+    "unstopped_instances": 0,
+    "completed_ids": [],
+    "resolved_ids": [
+        "django__django-12155",
+        "django__django-13344",
+        "django__django-13513",
+        "django__django-13810",
+        "django__django-15098",
+        "django__django-15252",
+        "django__django-16631",
+        "sphinx-doc__sphinx-8548",
+        "sphinx-doc__sphinx-8551",
+        "sphinx-doc__sphinx-8621"
+    ],
+    "unresolved_ids": [
+        "matplotlib__matplotlib-25311",
+        "sphinx-doc__sphinx-8638",
+        "sphinx-doc__sphinx-8721"
+    ],
+    "error_ids": [],
+    "unstopped_containers": [],
+    "unremoved_images": [
+        "exec.eval.x86_64.6b24dca158642bd6288384.24aa6bc5fafd3bdbfc9d5d:latest",
+        "exec.eval.x86_64.6b24dca158642bd6288384.55e28827f67f781ff3be26:latest",
+        "exec.eval.x86_64.77d82541416cab86d0d86a.0d4e54fc3aacc95b2b3257:latest",
+        "exec.eval.x86_64.77d82541416cab86d0d86a.12e0b043354681f8af2ca1:latest",
+        "exec.eval.x86_64.77d82541416cab86d0d86a.1a012dd7a575a49cd63119:latest",
+        "exec.eval.x86_64.77d82541416cab86d0d86a.7530dcb9d1310d9c4915f5:latest",
+        "exec.eval.x86_64.77d82541416cab86d0d86a.768d1934f33661d3a9cc7c:latest",
+        "exec.eval.x86_64.89beb6334e800c4362eea6.a0be8ca4c1490fd9d2a3a4:latest",
+        "exec.eval.x86_64.8d48ddaf97462eaa0fa9d9.6189870ca2916b7fc6b3f9:latest",
+        "exec.eval.x86_64.9097b18874f4d0ac315ef2.9fe46469c62633c45bbc90:latest",
+        "exec.eval.x86_64.f904a9d2e0f61fc0d70077.700997aa701c707339e038:latest",
+        "exec.eval.x86_64.f904a9d2e0f61fc0d70077.70805dd72ec6ff2bc3de1b:latest",
+        "exec.eval.x86_64.f904a9d2e0f61fc0d70077.734543d39d7aa1e46ffe89:latest"
+    ]
+}

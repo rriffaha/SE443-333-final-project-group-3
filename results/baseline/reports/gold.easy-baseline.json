@@ -1,0 +1,45 @@
+{
+    "total_instances": 13,
+    "completed_instances": 0,
+    "resolved_instances": 12,
+    "unresolved_instances": 1,
+    "error_instances": 0,
+    "Mean coverage": 0.8681318681318682,
+    "Mean coverage delta": 0.6886446886446886,
+    "unstopped_instances": 0,
+    "completed_ids": [],
+    "resolved_ids": [
+        "astropy__astropy-14508",
+        "django__django-11163",
+        "django__django-14089",
+        "matplotlib__matplotlib-13989",
+        "mwaskom__seaborn-3187",
+        "pallets__flask-5014",
+        "psf__requests-2931",
+        "pydata__xarray-3677",
+        "pytest-dev__pytest-7432",
+        "scikit-learn__scikit-learn-14894",
+        "sphinx-doc__sphinx-9711",
+        "sympy__sympy-24539"
+    ],
+    "unresolved_ids": [
+        "pylint-dev__pylint-6903"
+    ],
+    "error_ids": [],
+    "unstopped_containers": [],
+    "unremoved_images": [
+        "exec.eval.x86_64.13bad202ba417fcce45d9d.621f7d89e2f7ad4fa104be:latest",
+        "exec.eval.x86_64.3a033ae49dc50aea84d1f4.529fff02d25daed9053837:latest",
+        "exec.eval.x86_64.3a9417a9d4b5c62087edb6.47caa9b5873c3da266005d:latest",
+        "exec.eval.x86_64.437918b9cd24690e5e9c56.a13a54a72440a3821adc6d:latest",
+        "exec.eval.x86_64.4e6c6a611c1e7eeede5a3f.3f4d6e0225aeb345230f37:latest",
+        "exec.eval.x86_64.77d82541416cab86d0d86a.12d17484c900882831c5e2:latest",
+        "exec.eval.x86_64.bd0581d44706317407e86a.2d1c71ec16179861df8a9d:latest",
+        "exec.eval.x86_64.bfa0b4daea744b5aaefba0.64d7f7c86507f17e222a4c:latest",
+        "exec.eval.x86_64.deec2122407a414e380748.4875ffbbf816883aa80c99:latest",
+        "exec.eval.x86_64.ebed327f02c059ebd6024a.e15d0d9867ce4a0466e383:latest",
+        "exec.eval.x86_64.ee2ad6945f237e9160354f.9abfb63cef178bd684a2ce:latest",
+        "exec.eval.x86_64.f38d9a116162fe978a8db0.f1e04a496f6eb1c332fab5:latest",
+        "exec.eval.x86_64.fc8235bb41fea90b41065e.0e61b8e442dd90882e9ff4:latest"
+    ]
+}
