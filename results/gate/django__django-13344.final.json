@@ -1,0 +1,16 @@
+{
+ "instance_id": "django__django-13344",
+ "final_patch": "diff --git a/tests/deprecation/test_middleware_mixin.py b/tests/deprecation/test_middleware_mixin.py\nindex c90aeb8360..652f9dd843 100644\n--- a/tests/deprecation/test_middleware_mixin.py\n+++ b/tests/deprecation/test_middleware_mixin.py\n@@ -1,3 +1,4 @@\n+import asyncio\n import threading\n \n from asgiref.sync import async_to_sync\n@@ -45,6 +46,28 @@ class MiddlewareMixinTests(SimpleTestCase):\n                 with self.assertRaisesMessage(RemovedInDjango40Warning, self.msg):\n                     middleware()\n \n+    def test_coroutine(self):\n+        async def async_get_response(request):\n+            return HttpResponse()\n+\n+        def sync_get_response(request):\n+            return HttpResponse()\n+\n+        for middleware in [\n+            CacheMiddleware,\n+            FetchFromCacheMiddleware,\n+            UpdateCacheMiddleware,\n+            SecurityMiddleware,\n+        ]:\n+            with self.subTest(middleware=middleware.__qualname__):\n+                # Middleware appears as coroutine if get_response is a coroutine.\n+                middleware_instance = middleware(async_get_response)\n+                self.assertIs(asyncio.iscoroutinefunction(middleware_instance), True)\n+                # Middleware doesn't appear as coroutine if get_response isn't\n+                # a coroutine.\n+                middleware_instance = middleware(sync_get_response)\n+                self.assertIs(asyncio.iscoroutinefunction(middleware_instance), False)\n+\n     def test_sync_to_async_uses_base_thread_and_connection(self):\n         \"\"\"\n         The process_request() and process_response() hooks must be called with\n",
+ "attempts": [
+  {
+   "attempt": 0,
+   "verdict": "accept",
+   "reason": "test fails on the unmodified code with an assertion/library exception",
+   "cost": 0.014358690000000002,
+   "exit": "Submitted",
+   "patch_chars": 1622,
+   "secs": 342
+  }
+ ],
+ "accepted": true
+}

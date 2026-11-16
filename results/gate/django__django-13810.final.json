@@ -1,0 +1,16 @@
+{
+ "instance_id": "django__django-13810",
+ "final_patch": "diff --git a/tests/middleware_exceptions/tests.py b/tests/middleware_exceptions/tests.py\nindex 8b019ba524..0d7afa3700 100644\n--- a/tests/middleware_exceptions/tests.py\n+++ b/tests/middleware_exceptions/tests.py\n@@ -266,6 +266,14 @@ class MiddlewareSyncAsyncTests(SimpleTestCase):\n         with self.assertRaisesMessage(ValueError, msg):\n             self.client.get('/middleware_exceptions/template_response/')\n \n+    @override_settings(MIDDLEWARE=[\n+        'middleware_exceptions.middleware.PaymentMiddleware',\n+        'middleware_exceptions.tests.MyMiddleware',\n+    ])\n+    async def test_middleware_not_used_async(self):\n+        response = await self.async_client.get('/middleware_exceptions/view/')\n+        self.assertEqual(response.status_code, 402)\n+\n     @override_settings(MIDDLEWARE=[\n         'middleware_exceptions.middleware.SyncAndAsyncMiddleware',\n     ])\n",
+ "attempts": [
+  {
+   "attempt": 0,
+   "verdict": "accept",
+   "reason": "test fails on the unmodified code with an assertion/library exception",
+   "cost": 0.005318147999999999,
+   "exit": "Submitted",
+   "patch_chars": 875,
+   "secs": 197
+  }
+ ],
+ "accepted": true
+}

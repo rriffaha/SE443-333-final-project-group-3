@@ -1,0 +1,16 @@
+{
+ "instance_id": "django__django-15252",
+ "final_patch": "diff --git a/tests/migrations/test_executor.py b/tests/migrations/test_executor.py\nindex ca2c03cac5..ade4713645 100755\n--- a/tests/migrations/test_executor.py\n+++ b/tests/migrations/test_executor.py\n@@ -732,6 +732,17 @@ class ExecutorTests(MigrationTestBase):\n         )\n         self.assertTableNotExists('record_migration_model')\n \n+    @mock.patch.object(MigrationRecorder, 'has_table', return_value=False)\n+    def test_migrate_skips_schema_creation(self, mocked_has_table):\n+        \"\"\"\n+        The django_migrations table is not created if there are no migrations\n+        to record.\n+        \"\"\"\n+        executor = MigrationExecutor(connection)\n+        # 0 queries, since the query for has_table is being mocked.\n+        with self.assertNumQueries(0):\n+            executor.migrate([], plan=[])\n+\n     def test_migrations_not_applied_on_deferred_sql_failure(self):\n         \"\"\"Migrations are not recorded if deferred SQL application fails.\"\"\"\n         class DeferredSQL:\n",
+ "attempts": [
+  {
+   "attempt": 0,
+   "verdict": "accept",
+   "reason": "test fails on the unmodified code with an assertion/library exception",
+   "cost": 0.010425450000000001,
+   "exit": "Submitted",
+   "patch_chars": 982,
+   "secs": 230
+  }
+ ],
+ "accepted": true
+}
