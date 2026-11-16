@@ -4,7 +4,10 @@
 # as the agent scoring, so base/gold results and coverage delta are available.
 set -euo pipefail
 RUN=$1; LIST=$(realpath "$2"); W=${3:-2}
-cd "$(dirname "$0")/../../swt-bench/swt-bench"
+REPO="$(cd "$(dirname "$0")/.." && pwd)"
+HARNESS_REPO="${SWT_BENCH_REPO:-$REPO/../swt-bench}"
+if [ -d "$HARNESS_REPO/swt-bench" ]; then HARNESS_REPO="$HARNESS_REPO/swt-bench"; fi
+cd "$HARNESS_REPO"
 uv run python -m src.main --dataset_name princeton-nlp/SWE-bench_Verified \
   --predictions_path gold --filter_swt --max_workers "$W" --run_id "$RUN" \
   --instance_ids $(tr '\n' ' ' < "$LIST")

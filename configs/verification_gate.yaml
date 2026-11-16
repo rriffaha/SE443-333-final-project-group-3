@@ -1,0 +1,5 @@
+# Experimental arm overlay. Load after baseline_testonly.yaml.
+agent:
+  agent_class: src.gate.VerificationGateAgent
+  gate_max_retries: 2
+  gate_timeout: 120

@@ -5,13 +5,21 @@ DeepSeek-Flash test generation with mini-SWE-agent, evaluated on SWT-Bench (unit
 ## Versions (pinned for reproducibility)
 - mini-swe-agent: v2.4.6, commit 04d809ce
 - swt-bench harness: commit be12d4c
-- Model: DeepSeek-Flash (exact model ID: TODO)
+- Model: DeepSeek-Flash (`deepseek/deepseek-flash`)
 
 ## Workflow change
-TODO
+The experimental arm adds a deterministic execution gate around the unchanged DeepSeek-Flash agent. On submission, the gate reruns the agent's latest test command on the buggy repository (falling back to pytest on the changed test files). It accepts assertion failures and exceptions whose traceback enters library code. It rejects passing tests, import or collection errors, missing fixtures, syntax errors, test-only exceptions, timeouts, and crashes. A rejected candidate is returned to the model with execution output for at most two retries; exhaustion produces an empty `GateRejected` prediction.
 
 ## How to reproduce
-TODO
+Run the two arms with the same baseline config, model, limits, and instance list:
+
+`bash scripts/run_agent.sh baseline configs/baseline_testonly.yaml scripts/instances_easy.txt`
+
+`bash scripts/run_agent.sh gate configs/baseline_testonly.yaml scripts/instances_easy.txt configs/verification_gate.yaml`
+
+The only experimental overlay is `configs/verification_gate.yaml`. The launcher adds this repository to `PYTHONPATH` so mini-swe-agent can import `src.gate.VerificationGateAgent` from its sibling checkout. It looks for `../mini-swe-agent` by default; set `MINISWEAGENT_REPO` if the pinned checkout is elsewhere.
+
+See `docs/next_steps.md` for the current Easy-run checklist, validation commands, scoring procedure, and required analysis.
 
 ## Layout
 - `configs/` frozen baseline and workflow configs, including prompts

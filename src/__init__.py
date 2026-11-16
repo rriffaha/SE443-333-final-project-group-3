@@ -1,0 +1,1 @@
+"""Execution-guided verification gate for the experimental agent arm."""
