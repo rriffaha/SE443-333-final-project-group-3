@@ -16,6 +16,7 @@ checking the outputs:
   teammate's draft gate.
 - Drafting the README and the files in `docs/` from the project log.
 - Explaining concepts and outlining the presentation and report.
+- Organized sections, formatting tables and references, and providing guidance for compiling the document with Overleaf.
 
 ## What AI did not do
 - All numbers come from the SWT-Bench harness output committed in `results/`; none were
