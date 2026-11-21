@@ -14,12 +14,12 @@
   baseline.
 - Reviewed the teammate's draft gate and slide draft.
 
-## Teammate (CarlosAtienza, GitHub `c_j5604`)
+## Carlos Atienza
 - Did not contribute until Nov 15 (the gate and the full experiment had already been built and
   run by Riffa). On Nov 15 he pushed a separate in-loop gate draft on branch `gate-draft`
   (`src/gate.py`, `configs/verification_gate.yaml`, `docs/gate.md`, `docs/next_steps.md`),
-  tested only on pydata__xarray-3677, and shared a draft slide presentation.
-- His gate is not used for the reported results.
+  tested only on pydata__xarray-3677.
+- Created the presentation and full report.
 
 ## Notes
 - Commits 6fbd49f to 7c4582e appear on GitHub with the author name `NAME FROM ABOVE`. This is a
